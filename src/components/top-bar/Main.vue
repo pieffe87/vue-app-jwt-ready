@@ -149,6 +149,7 @@
     <!-- BEGIN: Account Menu -->
     <div class="intro-x dropdown w-8 h-8">
       <div
+				id="js-dropdown-toggle--user"
         class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
         role="button"
         aria-expanded="false"
@@ -163,9 +164,9 @@
           class="dropdown-menu__content box bg-theme-26 dark:bg-dark-6 text-white"
         >
           <div class="p-4 border-b border-theme-27 dark:border-dark-3">
-            <div class="font-medium">{{ $f()[0].users[0].name }}</div>
-            <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600">
-              {{ $f()[0].jobs[0] }}
+            <div class="font-medium" v-if="$auth.user() !== null" >{{ $auth.user().firstname }}</div>
+            <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600" v-if="$auth.user() !== null">
+              {{ $auth.user().type }}
             </div>
           </div>
           <div class="p-2">
@@ -196,8 +197,9 @@
           </div>
           <div class="p-2 border-t border-theme-27 dark:border-dark-3">
             <a
-              href=""
+              href="javascript:void(0)"
               class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"
+							@click="logout()"
             >
               <ToggleRightIcon class="w-4 h-4 mr-2" /> Logout
             </a>
@@ -215,7 +217,7 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
-    const searchDropdown = ref(false);
+		const searchDropdown = ref(false);
 
     const showSearchDropdown = () => {
       searchDropdown.value = true;
@@ -225,10 +227,16 @@ export default defineComponent({
       searchDropdown.value = false;
     };
 
-    return {
-      searchDropdown,
+		function logout() {
+			document.getElementById("js-dropdown-toggle--user").click()
+			this.$auth.logout({ 'redirect': '/login' })
+		};
+
+		return {
+			searchDropdown,
       showSearchDropdown,
-      hideSearchDropdown
+      hideSearchDropdown,
+			logout
     };
   }
 });
