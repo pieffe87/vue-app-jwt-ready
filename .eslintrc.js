@@ -1,26 +1,31 @@
 module.exports = {
     "env": {
-        "node": true,
-        "es6": true,
-        "commonjs": true
+			"node": true,
+			"browser": true  
     },
-    "extends": "eslint:recommended",
-    "globals": {
-				"localStorage": true,
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
+		'extends': [
+			'plugin:vue/essential',
+			// 'eslint:recommended'
+		],
+    // "extends": "eslint:recommended",
+    // "globals": {
+		// 		"localStorage": true,
+    //     "Atomics": "readonly",
+    //     "SharedArrayBuffer": "readonly"
+    // },
 		"parser": "vue-eslint-parser",
     "parserOptions": {
-        "ecmaVersion": 2018,
+        // "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": ["vue"],
 		"rules": {
-			"indent": [
-				"warn",
-				2
-			],
+		// 	"no-undef-init": "warn",
+    //   "no-undefined": "off",
+			// "indent": [
+			// 	"warn",
+			// 	2
+			// ],
 			// "linebreak-style": [
 			// 	"error",
 			// 	"unix"
@@ -33,7 +38,8 @@ module.exports = {
 			// 	"error",
 			// 	"always"
 			// ]
-		},
+			
+		// },
     // "rules": {
     //     "accessor-pairs": "error",
     //     "array-bracket-newline": "error",
@@ -349,5 +355,5 @@ module.exports = {
     //         "error",
     //         "never"
     //     ]
-    // }
+    }
 };
