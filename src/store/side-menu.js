@@ -8,8 +8,8 @@ const state = () => {
         subMenu: [
           {
             icon: "",
-            pageName: "side-menu-dashboard-overview-1",
-            title: "Overview 1"
+            pageName: "dashboard",
+            title: "Dashboard"
           },
           {
             icon: "",
