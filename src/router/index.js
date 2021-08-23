@@ -1,63 +1,64 @@
 import { createRouter, createWebHistory } from "vue-router";
-import SideMenu from "../layouts/side-menu/Main.vue";
-import DashboardOverview1 from "../views/dashboard-overview-1/Main.vue";
-import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
-import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
-import Inbox from "../views/inbox/Main.vue";
-import FileManager from "../views/file-manager/Main.vue";
-import PointOfSale from "../views/point-of-sale/Main.vue";
-import Chat from "../views/chat/Main.vue";
-import Post from "../views/post/Main.vue";
-import Calendar from "../views/calendar/Main.vue";
-import CrudDataList from "../views/crud-data-list/Main.vue";
-import CrudForm from "../views/crud-form/Main.vue";
-import UsersLayout1 from "../views/users-layout-1/Main.vue";
-import UsersLayout2 from "../views/users-layout-2/Main.vue";
-import UsersLayout3 from "../views/users-layout-3/Main.vue";
-import ProfileOverview1 from "../views/profile-overview-1/Main.vue";
-import ProfileOverview2 from "../views/profile-overview-2/Main.vue";
-import ProfileOverview3 from "../views/profile-overview-3/Main.vue";
-import WizardLayout1 from "../views/wizard-layout-1/Main.vue";
-import WizardLayout2 from "../views/wizard-layout-2/Main.vue";
-import WizardLayout3 from "../views/wizard-layout-3/Main.vue";
-import BlogLayout1 from "../views/blog-layout-1/Main.vue";
-import BlogLayout2 from "../views/blog-layout-2/Main.vue";
-import BlogLayout3 from "../views/blog-layout-3/Main.vue";
-import PricingLayout1 from "../views/pricing-layout-1/Main.vue";
-import PricingLayout2 from "../views/pricing-layout-2/Main.vue";
-import InvoiceLayout1 from "../views/invoice-layout-1/Main.vue";
-import InvoiceLayout2 from "../views/invoice-layout-2/Main.vue";
-import FaqLayout1 from "../views/faq-layout-1/Main.vue";
-import FaqLayout2 from "../views/faq-layout-2/Main.vue";
-import FaqLayout3 from "../views/faq-layout-3/Main.vue";
 import Login from "../views/login/Main.vue";
-import Register from "../views/register/Main.vue";
-import ErrorPage from "../views/error-page/Main.vue";
-import UpdateProfile from "../views/update-profile/Main.vue";
-import ChangePassword from "../views/change-password/Main.vue";
-import RegularTable from "../views/regular-table/Main.vue";
-import Tabulator from "../views/tabulator/Main.vue";
-import Accordion from "../views/accordion/Main.vue";
-import Button from "../views/button/Main.vue";
-import Modal from "../views/modal/Main.vue";
-import SlideOver from "../views/slide-over/Main.vue";
-import Notification from "../views/notification/Main.vue";
-import Alert from "../views/alert/Main.vue";
-import ProgressBar from "../views/progress-bar/Main.vue";
-import Tooltip from "../views/tooltip/Main.vue";
-import Dropdown from "../views/dropdown/Main.vue";
-import Typography from "../views/typography/Main.vue";
-import Icon from "../views/icon/Main.vue";
-import LoadingIcon from "../views/loading-icon/Main.vue";
-import RegularForm from "../views/regular-form/Main.vue";
-import Datepicker from "../views/datepicker/Main.vue";
-import TailSelect from "../views/tail-select/Main.vue";
-import FileUpload from "../views/file-upload/Main.vue";
-import WysiwygEditor from "../views/wysiwyg-editor/Main.vue";
-import Validation from "../views/validation/Main.vue";
-import Chart from "../views/chart/Main.vue";
-import Slider from "../views/slider/Main.vue";
-import ImageZoom from "../views/image-zoom/Main.vue";
+import Dashboard from "../views/dashboard/Main.vue";
+
+import SideMenu from "../layouts/side-menu/Main.vue";
+import DashboardOverview2 from "../theme-views/dashboard-overview-2/Main.vue";
+import DashboardOverview3 from "../theme-views/dashboard-overview-3/Main.vue";
+import Inbox from "../theme-views/inbox/Main.vue";
+import FileManager from "../theme-views/file-manager/Main.vue";
+import PointOfSale from "../theme-views/point-of-sale/Main.vue";
+import Chat from "../theme-views/chat/Main.vue";
+import Post from "../theme-views/post/Main.vue";
+import Calendar from "../theme-views/calendar/Main.vue";
+import CrudDataList from "../theme-views/crud-data-list/Main.vue";
+import CrudForm from "../theme-views/crud-form/Main.vue";
+import UsersLayout1 from "../theme-views/users-layout-1/Main.vue";
+import UsersLayout2 from "../theme-views/users-layout-2/Main.vue";
+import UsersLayout3 from "../theme-views/users-layout-3/Main.vue";
+import ProfileOverview1 from "../theme-views/profile-overview-1/Main.vue";
+import ProfileOverview2 from "../theme-views/profile-overview-2/Main.vue";
+import ProfileOverview3 from "../theme-views/profile-overview-3/Main.vue";
+import WizardLayout1 from "../theme-views/wizard-layout-1/Main.vue";
+import WizardLayout2 from "../theme-views/wizard-layout-2/Main.vue";
+import WizardLayout3 from "../theme-views/wizard-layout-3/Main.vue";
+import BlogLayout1 from "../theme-views/blog-layout-1/Main.vue";
+import BlogLayout2 from "../theme-views/blog-layout-2/Main.vue";
+import BlogLayout3 from "../theme-views/blog-layout-3/Main.vue";
+import PricingLayout1 from "../theme-views/pricing-layout-1/Main.vue";
+import PricingLayout2 from "../theme-views/pricing-layout-2/Main.vue";
+import InvoiceLayout1 from "../theme-views/invoice-layout-1/Main.vue";
+import InvoiceLayout2 from "../theme-views/invoice-layout-2/Main.vue";
+import FaqLayout1 from "../theme-views/faq-layout-1/Main.vue";
+import FaqLayout2 from "../theme-views/faq-layout-2/Main.vue";
+import FaqLayout3 from "../theme-views/faq-layout-3/Main.vue";
+import Register from "../theme-views/register/Main.vue";
+import ErrorPage from "../theme-views/error-page/Main.vue";
+import UpdateProfile from "../theme-views/update-profile/Main.vue";
+import ChangePassword from "../theme-views/change-password/Main.vue";
+import RegularTable from "../theme-views/regular-table/Main.vue";
+import Tabulator from "../theme-views/tabulator/Main.vue";
+import Accordion from "../theme-views/accordion/Main.vue";
+import Button from "../theme-views/button/Main.vue";
+import Modal from "../theme-views/modal/Main.vue";
+import SlideOver from "../theme-views/slide-over/Main.vue";
+import Notification from "../theme-views/notification/Main.vue";
+import Alert from "../theme-views/alert/Main.vue";
+import ProgressBar from "../theme-views/progress-bar/Main.vue";
+import Tooltip from "../theme-views/tooltip/Main.vue";
+import Dropdown from "../theme-views/dropdown/Main.vue";
+import Typography from "../theme-views/typography/Main.vue";
+import Icon from "../theme-views/icon/Main.vue";
+import LoadingIcon from "../theme-views/loading-icon/Main.vue";
+import RegularForm from "../theme-views/regular-form/Main.vue";
+import Datepicker from "../theme-views/datepicker/Main.vue";
+import TailSelect from "../theme-views/tail-select/Main.vue";
+import FileUpload from "../theme-views/file-upload/Main.vue";
+import WysiwygEditor from "../theme-views/wysiwyg-editor/Main.vue";
+import Validation from "../theme-views/validation/Main.vue";
+import Chart from "../theme-views/chart/Main.vue";
+import Slider from "../theme-views/slider/Main.vue";
+import ImageZoom from "../theme-views/image-zoom/Main.vue";
 
 const routes = [
   {
@@ -66,8 +67,11 @@ const routes = [
     children: [
       {
         path: "/",
-        name: "side-menu-dashboard-overview-1",
-        component: DashboardOverview1
+        name: "dashboard",
+				component: Dashboard,
+				meta: {
+					auth: true
+				},
       },
       {
         path: "dashboard-overview-2",
@@ -344,17 +348,26 @@ const routes = [
   {
     path: "/login",
     name: "login",
-    component: Login
+    component: Login,
+    meta: {
+      auth: false
+    }
   },
   {
     path: "/register",
     name: "register",
-    component: Register
+		component: Register,
+		meta: {
+			auth: false
+		}
   },
   {
     path: "/error-page",
     name: "error-page",
-    component: ErrorPage
+		component: ErrorPage,
+		meta: {
+			auth: false
+		}
   },
   {
     path: "/:pathMatch(.*)*",
@@ -368,20 +381,6 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { left: 0, top: 0 };
   }
-});
-
-router.beforeEach((to, from, next) => {
-	const publicPages = ['/login', '/register'];
-	const authRequired = !publicPages.includes(to.path);
-	const loggedIn = localStorage.getItem('user');
-
-	// trying to access a restricted page + not logged in
-	// redirect to login page
-	if (authRequired && !loggedIn) {
-		next('/login');
-	} else {
-		next();
-	}
 });
 
 export default router;
