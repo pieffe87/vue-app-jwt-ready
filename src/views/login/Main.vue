@@ -56,14 +56,14 @@
                 placeholder="Email"
 								v-model="state.form.body.email"
               />
-							<div class="text-danger text-sm">{{ state.form.errors.email }}</div>
+							<div class="mt-1 text-danger text-xs">{{ state.form.errors.email }}</div>
               <input
                 type="password"
                 class="intro-x login__input form-control py-3 px-4 border-gray-300 block mt-4"
                 placeholder="Password"
 								v-model="state.form.body.password"
               />
-							<div class="text-danger text-sm">{{ state.form.errors.password }}</div>
+							<div class="mt-1 text-danger text-xs">{{ state.form.errors.password }}</div>
             </div>
             <div
               class="intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4"
@@ -88,7 +88,7 @@
                 Login
               </button>
               <button
-                class="btn btn-outline-secondary py-3 px-4 w-full xl:w-32 mt-3 xl:mt-0 align-top"
+                class="btn btn-outline-secondary py-3 px-4 w-full xl:w-32 mt-3 xl:mt-0 align-top" @click="router.push({ name: 'register' })"
               >
                 Sign up
               </button>
@@ -115,6 +115,7 @@
 
 <script>
 import { defineComponent, onMounted, reactive } from "vue";
+import { useRouter } from "vue-router";
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 
 export default defineComponent({
@@ -122,6 +123,8 @@ export default defineComponent({
     DarkModeSwitcher
   },
   setup() {
+		const router = useRouter();
+
 		const state = reactive({
 			form: {
 				body: {
@@ -161,12 +164,13 @@ export default defineComponent({
     });
 
 		return {
-				state,
-				// loginThen,
-				// loginComp,
-				// loginManual,
-				loginDefault,
-				// loginRedirect,
+			router,
+			state,
+			// loginThen,
+			// loginComp,
+			// loginManual,
+			loginDefault,
+			// loginRedirect,
 		}
   }
 });
