@@ -33,13 +33,19 @@ var auth = createAuth({
 	options: {
 		tokenStore: ['localStorage'],
 		rolesKey: 'type',
-		authRedirect: '/',
+		authRedirect: '/login',
 		loginData: {
 			url: `${process.env.VUE_APP_AXIOSBASEURL}auth/login`,
 			method: 'POST',
 			redirect: '/',
 			fetchUser: true,
 			staySignedIn: false
+		},
+		registerData: {
+			url: `${process.env.VUE_APP_AXIOSBASEURL}auth/register`,
+			method: 'POST',
+			redirect: '/login',
+			autoLogin: false
 		},
 		fetchData: {
 			url: `${process.env.VUE_APP_AXIOSBASEURL}auth/user`,
