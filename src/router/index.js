@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "../views/login/Main.vue";
+import Register from "../views/register/Main.vue";
 import Dashboard from "../views/dashboard/Main.vue";
 
 import SideMenu from "../layouts/side-menu/Main.vue";
@@ -32,7 +33,6 @@ import InvoiceLayout2 from "../theme-views/invoice-layout-2/Main.vue";
 import FaqLayout1 from "../theme-views/faq-layout-1/Main.vue";
 import FaqLayout2 from "../theme-views/faq-layout-2/Main.vue";
 import FaqLayout3 from "../theme-views/faq-layout-3/Main.vue";
-import Register from "../theme-views/register/Main.vue";
 import ErrorPage from "../theme-views/error-page/Main.vue";
 import UpdateProfile from "../theme-views/update-profile/Main.vue";
 import ChangePassword from "../theme-views/change-password/Main.vue";
@@ -64,14 +64,14 @@ const routes = [
   {
     path: "/",
     component: SideMenu,
+		meta: {
+			auth: true
+		},
     children: [
       {
         path: "/",
         name: "dashboard",
 				component: Dashboard,
-				meta: {
-					auth: true
-				},
       },
       {
         path: "dashboard-overview-2",
